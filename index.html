@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimal BEPRO example</title>
+</head>
+<body>
+
+<div>
+  <h3>Deploy ERC20 on KOVAN</h3>
+  <div>
+    <input type="text" name="erc20name" placeholder="ERC20 Name" />
+  </div>
+  <div>
+    <input type="text" name="erc20symbol" placeholder="ERC20 symbol" />
+  </div>
+  <div>
+    <input type="number" name="erc20cap" placeholder="ERC20 cap" />
+    <input type="number" name="erc20dec" placeholder="decimals" value="18" />
+  </div>
+  <div>
+    <input type="text" name="erc20address" placeholder="Distribution address" value="0xYOUR_ADDRESS" />
+  </div>
+  <div>
+    <button id="erc20deploy">deploy erc20</button>
+  </div>
+</div>
+
+<script src="bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "minimal-bepro-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "lite-server .",
+    "build": "browserify index.js -o bundle.js"
+  },
+  "author": "moshmage@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bepro-js": "github:bepronetwork/bepro-js#master",
+    "browserify": "^17.0.0",
+    "lite-server": "^2.6.1"
+  }
+}
