@@ -19,8 +19,8 @@ Token on the `kovan` network.
 You can change this limitation, by yourself, be removing or commenting the lines `59` and `60` of the
 `index.js` file and providing the correct web3 provider link.
 
-The default web3 provider is missin a _identification_ required by infura - you can use any other web3
-provider that you'd like.
+The default web3 provider is missing a _identification_ required by infura - you can use any other web3
+provider that you'd like; change it on line `5` of index.js
 
 The default base ERC20 Token is using a Kovan address, don't forget to change line `12` of index.js
 if you plan on deploying on anyother network and use a ERC20 as a base on that network.
