@@ -1,0 +1,38 @@
+name: Update documentation
+
+on:
+  repository_dispatch:
+    types: [update_docs]
+  push:
+    branches:
+      - master
+
+jobs:
+  update_doc:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.17.0 ]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: npm install
+        run: npm install
+
+      - name: build
+        run: npm run build
+
+      - name: copy files
+        run: mkdir dist && cp index.html dist/index.html && cp app.js dist/app.js
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./dist
+          keep_files: true
+

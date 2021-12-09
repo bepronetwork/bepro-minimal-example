@@ -2,10 +2,13 @@
   "name": "minimal-bepro-example",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.17.0"
+  },
   "scripts": {
     "prestart": "npm run build",
     "start": "lite-server .",
-    "build": "browserify index.js -o bundle.js"
+    "build": "browserify index.js -o app.js"
   },
   "author": "moshmage@gmail.com",
   "license": "ISC",
